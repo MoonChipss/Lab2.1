@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Laboratory 2.1</title> 
+        <style type="text/css">
+            table{
+                border: 1px solid black;
+                width: 50px;
+                height: 25px;
+            }
+
+        </style>
+    </head>
+<body>
+
+    <form>
+        <label> Last Name:  </label> 
+        <input type = "text"  id="lname"> 
+        <label> First Name: </label> 
+        <input type = "text" id="fname"> <br> <br>
+        <label> Section: </label> 
+        <input type = "text" id="sec">
+        <label>  Year: </label> 
+        <input type = "number" id="year"> <br> <br>
+        <hr>
+        <label>  Quiz: </label> 
+        <input type = "number" id="qz"> <br> <br>
+        <label>  Assignment: </label> 
+        <input type = "number" id="ass"> <br> <br>
+        <label>  Recitation: </label> 
+        <input type = "number" id="rec"> <br> <br>
+        <label>  Term Exam: </label> 
+        <input type = "number" id="texm"> <br>  <br>
+        <button type="button" onclick="Grades()"> Show Computed Grades </button>
+        <p id="name"> Name: (Last name, First Name)  </p>
+        <p id="class">Class: </p>
+
+
+<table>
+    <label>Quiz</label>
+    <td id="quiz"></td>
+</table>
+<br>
+<table>
+    <label>Assignment</label>
+    <td id="assi"></td>
+</table>
+<br>
+<table>
+    <label>Recitation</label>
+    <td id="reci"></td>
+</table>
+<br>
+<table>
+    <label>Term Exam</label>
+    <td id="term"></td>
+</table>
+
+</form>
+
+<script type="text/javascript">
+
+    function Grades(){
+
+    var a=document.getElementById("lname").value;
+    var b=document.getElementById("fname").value;
+    document.getElementById ("name").innerHTML = "Name: (Last name, First Name)" + a + " , " + b ; 
+
+    var c=document.getElementById("sec").value;
+    var d=document.getElementById("year").value;
+    document.getElementById ("class").innerHTML = "Class: " + d + "-" + c;
+
+    var e=document.getElementById("qz").value;
+    document.getElementById("quiz").innerHTML= e;
+
+    var f=document.getElementById("ass").value;
+    document.getElementById("assi").innerHTML= f;
+
+    var g=document.getElementById("rec").value;
+    document.getElementById("reci").innerHTML= g;
+
+    var h=document.getElementById("texm").value;
+    document.getElementById("term").innerHTML= h;
+    
+    }
+    
+    </script>
+
+
+
+
+
+</body>
+</html>
